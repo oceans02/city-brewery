@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {  Route, Routes} from 'react-router-dom';
+import { Header } from './components/header/header.component';
+import { HomePage } from './pages/homepage/homepage.component';
+import {Footer} from './components/footer/footer.component';
+import { BreweryDetail } from './components/brewery-detail/brewery-detail.component';
 
+// Display Header, Footer and Homepage. Routes for Homepage and Details pages
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+            <Route path='/*' element={<HomePage/>} />
+            <Route path='/detail/:id' element={<BreweryDetail  />} />
+      </Routes>
+     <Footer />
     </div>
   );
 }

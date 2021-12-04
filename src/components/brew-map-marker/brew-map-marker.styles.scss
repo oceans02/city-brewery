@@ -1,0 +1,19 @@
+.brew-map-marker {
+  color: white;
+  background: rgb(223, 47, 47);
+  width: 20px;
+  height: 10px;
+  padding: 10px 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px 15px 15% 15%;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+  text-transform: uppercase;
+
+  &:hover {
+    width: 40px;
+  }
+}

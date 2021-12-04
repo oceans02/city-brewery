@@ -1,0 +1,85 @@
+@import "../_brewerybase.scss";
+$header-main: #b76e0c;
+
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  background-color: $header-main;
+  color: black;
+
+  .logo-container {
+    padding: 20px;
+
+    .logo {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      border: $logo-sub solid 0.5px;
+      padding: 10px;
+      color: $logo-main;
+    }
+  }
+
+  .header-sections {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .header-section {
+      padding: 10px 15px;
+      cursor: pointer;
+      color: black;
+      text-transform: capitalize;
+      letter-spacing: 0.3rem;
+
+      &:hover {
+        color: $logo-main;
+      }
+    }
+  }
+}
+
+// small screens
+@media (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-medium) {
+  .header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .logo-container {
+      padding: 15px;
+
+      .logo {
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        border: $logo-sub solid 0.5px;
+        padding: 10px;
+        color: $logo-main;
+      }
+    }
+
+    .header-sections {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .header-section {
+        font-size: 10px;
+        padding: 10px 8px;
+        cursor: pointer;
+        color: black;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
