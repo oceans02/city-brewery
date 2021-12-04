@@ -8,7 +8,7 @@ export const Header =() =>(
         </Link>
 
     <div className="header-sections">
-        <Link to="/" className="header-section">About</Link>
+        <Link to="/" className="header-section">Home</Link>
         <Link to="/" className="header-section">Brewery List</Link>
     </div>
 </div>

@@ -25,6 +25,7 @@ export const BreweryDetail:FC<IBrewProps> = () => {
                 <div className="brew-address">
                     <span>{street}</span>
                     <p>{city} {state}, {postal_code}</p>
+                    {/* {console.log({city}, {state}, {postal_code})} */}
                 </div>
             </div>
             <div className="panel-right" >

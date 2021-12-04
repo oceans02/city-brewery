@@ -1,100 +1,137 @@
 @import "../_brewerybase.scss";
 
-.brewery-list {
-  width: 22%;
-  height: 320px;
+.brewery-list-overview {
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 40px;
-  cursor: pointer;
+  width: 22%;
+  height: auto;
+  overflow: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
-  overflow: hidden;
   background-color: $card-base;
   border-left: 70px solid #b6bab947;
+  padding: 15px;
+  margin-bottom: 40px;
   line-height: 1.2rem;
 
-  .title {
-    font-size: 20px;
-    height: 95%;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.4rem;
-    line-height: 2.2;
+  .brewery-list {
+    cursor: pointer;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
+    flex-direction: column;
+    border-radius: 5px;
+
+    .title {
+      font-size: 20px;
+      height: 95%;
+      font-weight: bolder;
+      font-family: Arial, Helvetica, sans-serif;
+      letter-spacing: 0.4rem;
+      line-height: 2.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .address {
+      font-size: 16px;
+      font-weight: 500px;
+      padding-top: 10px;
+      line-height: 0.8rem;
+      color: $logo-main;
+      margin-bottom: 20px;
+    }
+
+    .brew-type {
+      color: #d7b15f;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  &:hover {
+    transform: scale(1.05);
   }
 
-  .address {
-    font-size: 16px;
-    font-weight: 500px;
-    padding-top: 10px;
-    color: $logo-main;
-  }
-
-  .web-url {
-    color: $logo-sub;
+  .website {
     margin-bottom: 10px;
     margin-top: 20px;
     letter-spacing: 0.08rem;
-  }
-
-  .brew-type {
-    color: #d7b15f;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-end;
-    height: 5%;
+    .web-url {
+      color: $logo-sub;
+    }
   }
 
-  &:hover {
-    transform: scale(1.05);
+  .custom-button {
+    width: 85px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.8px;
+    padding: 5px;
+    margin-top: 15px;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
   }
 }
 
 // small screens
 @media (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-medium) {
-  .brewery-list {
+  .brewery-list-overview {
     width: 100%;
     height: auto;
     border-left: 12px solid #b6bab947;
     line-height: 1.2rem;
     margin-bottom: 20px;
 
-    .title {
-      font-size: 14px;
-      letter-spacing: 0.2rem;
-      line-height: 1.5;
-      padding: 5px;
-      margin-bottom: 8px;
-      display: flex;
-      justify-content: left;
+    .brewery-list {
+      .title {
+        font-size: 14px;
+        letter-spacing: 0.2rem;
+        line-height: 1.5;
+        padding: 5px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: left;
+      }
+
+      .address {
+        font-size: 12px;
+        padding-top: 5px;
+        line-height: 0.8rem;
+      }
+
+      .brew-type {
+        font-size: 12px;
+      }
     }
 
-    .address {
-      font-size: 12px;
-      padding-top: 5px;
-      line-height: 0.8rem;
+    .website {
+      margin-bottom: 10px;
+      margin-top: 20px;
+      letter-spacing: 0.08rem;
     }
-
-    .web-url {
-      margin-bottom: 15px;
-      margin-top: 10px;
-    }
-
-    .brew-type {
-      font-size: 12px;
-    }
+  }
+  .custom-button {
+    width: 65px;
+    height: 25px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 10px;
   }
 }
